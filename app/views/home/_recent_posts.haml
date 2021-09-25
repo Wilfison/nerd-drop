@@ -1,0 +1,10 @@
+.row.my-4
+  - @recent_posts.each do |post|
+    .col-md-4
+      = link_to @highlight_post.link, class: 'card w-100 post_block_link bg-transparent border-0' do
+        = image_tag post.cover_link, alt: post.title, class: 'card-img-top cover'
+        .card-body
+          %span.text-muted= format_date(post.created_at)
+          %h5.card-title= post.title
+          %p.card-text= post.description
+          %button.btn.btn-primary{type: 'button'} Ler Post

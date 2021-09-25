@@ -1,0 +1,20 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  .container
+    %a.navbar-brand{href: "#"} The Will
+    %button.navbar-toggler{"aria-controls": "navbarScroll", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-bs-target": "#navbarScroll", "data-bs-toggle": "collapse", type: "button"}
+      %span.navbar-toggler-icon
+    #navbarScroll.collapse.navbar-collapse
+      %form.d-flex.mx-auto
+        %input.form-control.me-2{"aria-label": "Search", placeholder: "Search", type: "search", name: 'q'}
+        %button.btn.btn-light{type: "submit"} Search
+
+      %ul.navbar-nav.my-2.my-lg-0.navbar-nav-scroll{style: "--bs-scroll-height: 100px;"}
+        %li.nav-item
+          %a.nav-link.active{"aria-current": "page", href: "/"} Home
+        %li.nav-item.dropdown
+          %a#navbarCategoryDrop.nav-link.dropdown-toggle{"aria-expanded": "false", "data-bs-toggle": "dropdown", href: "#", role: "button"}
+            Categorias
+          %ul.dropdown-menu{"aria-labelledby": "navbarCategoryDrop"}
+            - @categories.each do |category|
+              %li
+                %a.dropdown-item{href: "/category/#{category.id}"}= category.name

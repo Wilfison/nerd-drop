@@ -1,0 +1,29 @@
+
+@import "../styles/variables";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  background-color: #e4e6ec;
+}
+
+#the-will-home {
+  font-size: 60px;
+}
+
+.cover {
+  width: 100%;
+  object-fit: cover;
+  border-radius: $border-radius-lg;
+}
+
+// ==========================
+// Posts
+// ==========================
+.post_block_link {
+  text-decoration: none;
+  color: $body-color;
+  
+  &:hover {
+    color: $body-color;
+  }
+}

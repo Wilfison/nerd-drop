@@ -1,0 +1,11 @@
+{
+  "editor.minimap.enabled": false,
+  "editor.tabSize": 2,
+  "solargraph.useBundler": true,
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "ruby.format": "rubocop",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+}
