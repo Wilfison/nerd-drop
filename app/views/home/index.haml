@@ -2,6 +2,8 @@
   .row
     .col-12
       %h1#the-will-home The Will
+      %p Últimas notícias do mundo nerd agrupas dos melhores sites.
 
   = render 'highlight_post'
-  = render 'recent_posts'
+
+  = render 'post_list', posts: @recent_posts, title: 'Mais Recentes'

@@ -1,7 +1,12 @@
-= link_to @highlight_post.link, class: 'row post_block_link' do
+= link_to @highlight_post.link, class: 'row post_block_link mb-5' do
   .col-md-6
     = image_tag @highlight_post.cover_link, alt: @highlight_post.title, class: 'cover', style: 'min-heigth: 400px;'
   .col-md-6
-    %span.text-muted= format_date(@highlight_post.created_at)
-    %h2.h1= @highlight_post.title
-    %p.text-muted= @highlight_post.description
+    %span.text-muted
+      = "#{format_date(@highlight_post.created_at)} - #{@highlight_post.origin.to_s.titleize}"
+
+    %h2.h1
+      = @highlight_post.title
+
+    %p.text-muted
+      = @highlight_post.description

@@ -15,6 +15,9 @@ gem 'haml-rails', '~> 2.0'
 
 gem 'bootsnap', '>= 1.4.4', require: false
 
+gem 'httparty'
+gem 'nokogiri'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
@@ -25,6 +28,7 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'spring'
   gem 'solargraph'
+  gem 'pry'
 end
 
 group :test do
