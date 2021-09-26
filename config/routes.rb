@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   get :searcher, to: 'home#searcher'
 
   resources :categories, only: :show
+  resources :scraper, only: :index
 end
