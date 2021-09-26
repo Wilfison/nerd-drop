@@ -12,6 +12,7 @@ module Scrapers
       doc = Nokogiri::HTML(html)
 
       create_posts(doc.css('.card-post'))
+      create_posts(doc.css('.main-highlights article'))
     end
 
     def self.create_posts(card_posts)

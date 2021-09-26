@@ -4,7 +4,7 @@ class ScraperController < ApplicationController
 
     Scraper.run
 
-    render text: 'ok'
+    render json: { status: 'ok' }, status: :ok
   end
 
   private
