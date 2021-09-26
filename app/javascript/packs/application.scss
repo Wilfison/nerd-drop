@@ -10,6 +10,10 @@ body {
   font-size: 60px;
 }
 
+#main-content {
+  min-height: 85vh;
+}
+
 .cover {
   width: 100%;
   object-fit: cover;

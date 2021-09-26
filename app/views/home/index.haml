@@ -6,11 +6,11 @@
 
 = render 'highlight_post'
 
-= render 'post_list', posts: @recent_posts, title: 'Mais Recentes'
+= render 'post_list', posts: @recent_posts, title1: 'Mais Recentes'
 
 - @categories.each do |category|
   :ruby
     posts = category.posts.recents(3).where.not(id: @recent_posts.map(&:id) + [@highlight_post.id])
     next if posts.blank?
 
-  = render 'post_list', posts: posts, title: category.name
+  = render 'post_list', posts: posts, title1: category.name

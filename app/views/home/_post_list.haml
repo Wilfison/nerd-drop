@@ -1,7 +1,11 @@
 .row.my-4
-  - if defined? title
+  - if defined? title1
     .col-12.mb-2
-      %h3= title
+      %h3
+        = title1
+      
+        - if defined? title2
+          %span.text-primary= title2
 
   - posts.each do |post|
     .col-md-4.mb-3

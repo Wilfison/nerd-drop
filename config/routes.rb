@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   root 'home#index'
 
   get :searcher, to: 'home#searcher'
+
+  resources :categories, only: :show
 end
