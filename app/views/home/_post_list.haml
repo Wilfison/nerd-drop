@@ -5,7 +5,7 @@
 
   - posts.each do |post|
     .col-md-4.mb-3
-      = link_to @highlight_post.link, class: 'card w-100 post_block_link bg-transparent border-0' do
+      = link_to post.link, class: 'card w-100 post_block_link bg-transparent border-0' do
 
         = image_tag post.cover_link, alt: post.title, class: 'card-img-top cover'
 
@@ -18,3 +18,5 @@
           
           %p.card-text
             = post.description
+
+  %hr.my-5

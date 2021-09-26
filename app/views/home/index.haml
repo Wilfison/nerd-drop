@@ -1,9 +1,16 @@
-.container.py-5
-  .row
-    .col-12
-      %h1#the-will-home The Will
-      %p Últimas notícias do mundo nerd agrupas dos melhores sites.
 
-  = render 'highlight_post'
+.row
+  .col-12
+    %h1#the-will-home The Will
+    %p Últimas notícias do mundo nerd agrupas dos melhores sites.
 
-  = render 'post_list', posts: @recent_posts, title: 'Mais Recentes'
+= render 'highlight_post'
+
+= render 'post_list', posts: @recent_posts, title: 'Mais Recentes'
+
+- @categories.each do |category|
+  :ruby
+    posts = category.posts.recents(3).where.not(id: @recent_posts.map(&:id) + [@highlight_post.id])
+    next if posts.blank?
+
+  = render 'post_list', posts: posts, title: category.name

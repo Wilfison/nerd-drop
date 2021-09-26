@@ -1,8 +1,14 @@
 class HomeController < ApplicationController
+  before_action :set_collection
+
   def index
-    @categories = Category.all.order(:name)
     @highlight_post = Post.last
     @recent_posts = scope_post(9).where.not(id: @highlight_post)
+  end
+
+  def searcher
+    @q = Post.ransack(title_cont: params[:q])
+    @posts = @q.result(distinct: true).order(id: :desc).limit(20)
   end
 
   private

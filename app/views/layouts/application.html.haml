@@ -16,4 +16,12 @@
   %body
     = render 'layouts/navigation/navbar'
 
-    = yield
+    .container.py-5
+      = yield
+
+    %footer.w-100.bg-dark.text-light.py-5.px-3
+      .container.text-center
+        = "The Will #{Time.now.strftime('%Y')} -" 
+        Desenvolvido por
+        = link_to 'Wilfison', 'https://github.com/Wilfison', target: '_blank'
+

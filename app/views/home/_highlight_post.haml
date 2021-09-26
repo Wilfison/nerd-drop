@@ -1,4 +1,4 @@
-= link_to @highlight_post.link, class: 'row post_block_link mb-5' do
+= link_to @highlight_post.link, class: 'row post_block_link mb-5', target: '_blank' do
   .col-md-6
     = image_tag @highlight_post.cover_link, alt: @highlight_post.title, class: 'cover', style: 'min-heigth: 400px;'
   .col-md-6
@@ -10,3 +10,5 @@
 
     %p.text-muted
       = @highlight_post.description
+
+    %button.btn.btn-lg.btn-primary.rounded-pill{type: 'button'} LER NOTÍCIA
