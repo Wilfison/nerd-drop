@@ -2,7 +2,7 @@
 
 # main scrapers
 class Scraper
-  SCRAPERS = [Scrapers::JovemNerd].freeze
+  SCRAPERS = [Scrapers::IntoxiAnimes, Scrapers::JovemNerd].freeze
 
   def initialize(scrapers = [])
     @scrapers = scrapers.present? ? scrapers : SCRAPERS

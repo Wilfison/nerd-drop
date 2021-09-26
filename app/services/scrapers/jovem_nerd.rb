@@ -31,7 +31,8 @@ module Scrapers
         post.description = nil
 
         post.save
-      rescue StandardError
+      rescue StandardError => e
+        Rails.logger.info e
         next
       end
     end
@@ -41,7 +42,8 @@ module Scrapers
         'Filmes' => 'Filme',
         'Séries e TV' => 'Série',
         'Animes e Mangás' => 'Anime',
-        'Games' => 'Games'
+        'Games' => 'Games',
+        'HQs e Livros' => 'Mangás e HQs'
       }
 
       Category.find_by(name: categories[category_name])

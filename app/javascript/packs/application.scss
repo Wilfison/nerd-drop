@@ -26,4 +26,12 @@ body {
   &:hover {
     color: $body-color;
   }
+
+  .cover {
+    height: 240px;
+  }
+
+  .cover-highlight {
+    height: 400px;
+  }
 }
