@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "dokku": {
+      "postdeploy": "bundle exec rake db:migrate && while true; do /bin/wget -qO- https://nerd-drop.herokuapp.com/scraper?token=lKtT7jYxE_KX1TZmLRfGAw ; sleep 900 ; done > /dev/null 2>&1 &"
+    }
+  }
+}
