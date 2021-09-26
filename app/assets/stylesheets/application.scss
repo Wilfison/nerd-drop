@@ -1,29 +1,50 @@
 
-// @import "./variables";
-// @import "bootstrap";
+@import "./variables";
+@import "bootstrap";
 
-// body {
-//   background-color: #e4e6ec;
-// }
+body {
+  background-color: #e4e6ec;
+}
 
-// #the-will-home {
-//   font-size: 60px;
-// }
+#the-will-home {
+  font-size: 60px;
+}
 
-// .cover {
-//   width: 100%;
-//   object-fit: cover;
-//   border-radius: $border-radius-lg;
-// }
+#main-content {
+  min-height: 85vh;
+}
 
-// // ==========================
-// // Posts
-// // ==========================
-// .post_block_link {
-//   text-decoration: none;
-//   color: $body-color;
+.cover {
+  width: 100%;
+  object-fit: cover;
+  border-radius: $border-radius-lg;
+}
+
+// ==========================
+// Posts
+// ==========================
+.post_block_link {
+  text-decoration: none;
+  color: $body-color;
   
-//   &:hover {
-//     color: $body-color;
-//   }
-// }
+  &:hover {
+    color: $body-color;
+  }
+
+  .cover {
+    height: 240px;
+  }
+
+  .cover-highlight {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px){
+  .post_block_link {
+    .cover-highlight {
+      height: 200px !important;
+    }
+  }
+}
+
