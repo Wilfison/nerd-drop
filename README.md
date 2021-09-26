@@ -1,24 +1,32 @@
-# README
+# THE WILL
+## Latest news from the nerd world groups the best brazilian sites.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web Scraper created on rails that gathers the latest news from geek sites
 
-Things you may want to cover:
+### Demo
+Access the demo at [thewill.herokuapp.com](https://thewill.herokuapp.com)
 
-* Ruby version
+### Supported Websites
 
-* System dependencies
+- [Jovem Nerd](https://jovemnerd.com.br/)
+- [Intoxi Animes](https://www.intoxianime.com/)
 
-* Configuration
+### Development
 
-* Database creation
+#### Clone the repository
+```shell
+git clone git@github.com:Wilfison/thewill.git
+```
 
-* Database initialization
+#### Install dependencies
+```shell
+yarn install
+```
+```shell
+bundle install
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#### Create the database in Postgres
+```shell
+rails db:create db:migrate db:seed
+```
