@@ -1,10 +1,10 @@
-# THE WILL
+# Nerd Drop
 ## Latest news from the nerd world groups the best brazilian sites.
 
 Web Scraper created on rails that gathers the latest news from geek sites
 
 ### Demo
-Access the demo at [thewill.herokuapp.com](https://thewill.herokuapp.com)
+Access the demo at [nerd-drop.herokuapp.com](https://nerd-drop.herokuapp.com)
 
 ### Supported Websites
 
@@ -15,7 +15,7 @@ Access the demo at [thewill.herokuapp.com](https://thewill.herokuapp.com)
 
 #### Clone the repository
 ```shell
-git clone git@github.com:Wilfison/thewill.git
+git clone git@github.com:Wilfison/nerd-drop.git
 ```
 
 #### Install dependencies
