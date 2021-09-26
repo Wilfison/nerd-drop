@@ -22,4 +22,4 @@ test:
 
 production:
   <<: *default
-  database: the_will
+  url: <%= ENV['DATABASE_URL'] %>
