@@ -47,7 +47,9 @@ module Scrapers
     end
 
     def self.cover_link(link)
-      link.to_s.sub('-520x245', '')
+      # link.to_s.sub('-520x245', '')
+
+      link
     end
   end
 end

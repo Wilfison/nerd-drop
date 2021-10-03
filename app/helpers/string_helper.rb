@@ -23,4 +23,7 @@ module StringHelper
     t("booleans.#{valor}")
   end
 
+  def encode_uri(text)
+    ERB::Util.url_encode(text.to_s)
+  end
 end

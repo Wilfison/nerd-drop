@@ -9,18 +9,24 @@
 
   - posts.each do |post|
     .col-md-4.mb-3
-      = link_to post.link, class: 'card w-100 post_block_link bg-transparent border-0' do
+      .card.w-100.h-100.card-post.bg-transparent.border-0
 
-        = image_tag post.cover_link, alt: post.title, class: 'card-img-top cover'
+        = link_to post.link, class: 'w-100 post-link' do
+          %img.card-img-top.cover{'data-src': post.cover_link, alt: post.title}
 
         .card-body
-          %span.text-muted
-            = "#{format_date(post.created_at)} - #{post.origin.to_s.titleize}"
-          
-          %h5.card-title
-            = post.title
-          
-          %p.card-text
-            = post.description
+          .post-data
+            %span.text-muted
+              = "#{format_date(post.created_at)} - #{post.origin.to_s.titleize}"
+            
+            %h5.card-title
+              = link_to post.link, class: 'post-link' do
+                = post.title
+
+            %p.card-text
+              = post.description
+
+          .mb-2
+            = render 'home/share', post: post
 
   %hr.my-5

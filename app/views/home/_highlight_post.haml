@@ -1,16 +1,22 @@
-= link_to @highlight_post.link, class: 'row post_block_link mb-5', target: '_blank' do
+.row.mb-5
   .col-md-6
-    = image_tag @highlight_post.cover_link, alt: @highlight_post.title, class: 'cover cover-highlight', style: 'min-heigth: 400px;'
+    = link_to @highlight_post.link, class: 'post-link', target: '_blank' do
+      %img.cover-highlight.cover{'data-src': @highlight_post.cover_link, alt: @highlight_post.title, style: 'min-heigth: 400px;'}
+
   .col-md-6
     %small.text-muted
       = "#{format_date(@highlight_post.created_at)} - #{@highlight_post.origin.to_s.titleize}"
 
     %h2.h1
-      = @highlight_post.title
+      = link_to @highlight_post.link, class: 'post-link', target: '_blank' do
+        = @highlight_post.title
 
     %p.text-muted
       = @highlight_post.description
 
-    %button.btn.btn-primary.rounded-pill.mb-3{type: 'button'} LER NOTÍCIA
+    = link_to 'LER NOTÍCIA', @highlight_post.link, class: 'btn btn-primary rounded-pill mb-3', target: '_blank'
 
     %small.text-muted.d-block= "Atualizado em #{format_datetime(@highlight_post.created_at)}"
+
+    .my-3
+      = render 'home/share', post: @highlight_post, align: 'start'

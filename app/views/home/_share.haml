@@ -1,0 +1,17 @@
+:ruby
+  post_url = encode_uri(post.link)
+  post_title = encode_uri(post.title)
+
+.post-share.d-flex.d-lg-initial.align-items-center.mt-3.mt-lg-0{class: defined?(align) ? "justify-content-#{align}" : 'justify-content-end'}
+
+  %a.post-share-facebook{href: "https://facebook.com/sharer/sharer.php?u=#{post_url}", target: "_blank"}
+    %i.fab.fa-facebook
+
+  %a.post-share-twitter{href: "https://twitter.com/intent/tweet?url=#{post_url}&text=#{post_title}&via=Nerd%20Drops", target: "_blank"}
+    %i.fab.fa-twitter
+
+  %a.post-share-telegram{href: "https://telegram.me/share/url?url=#{post_url}&text=#{post_title}&via=Nerd%20Drops", target: "_blank"}
+    %i.fab.fa-telegram-plane
+
+  %a.post-share-whatsapp{"data-action": "share/whatsapp/share", href: "https://web.whatsapp.com/send?text=#{post_title}%0A%0A#{post_url}%0A%0Avia Nerd%20Drops", target: "_blank"}
+    %i.fab.fa-whatsapp

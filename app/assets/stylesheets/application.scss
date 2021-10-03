@@ -1,6 +1,8 @@
 
 @import "./variables";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 body {
   background-color: #e4e6ec;
@@ -23,20 +25,37 @@ body {
 // ==========================
 // Posts
 // ==========================
-.post_block_link {
+
+a.post-link {
   text-decoration: none;
   color: $body-color;
   
   &:hover {
     color: $body-color;
   }
+}
 
+.card-post {
   .cover {
     height: 240px;
   }
 
   .cover-highlight {
     height: 400px;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+.post-share {
+  a {
+    color: $text-muted;
+    padding: 5px 10px;
+    font-size: 1.3rem;
   }
 }
 
@@ -45,6 +64,10 @@ body {
     .cover-highlight {
       height: 200px !important;
     }
+  }
+
+  #navbarSearchBtn {
+    display: none;
   }
 }
 

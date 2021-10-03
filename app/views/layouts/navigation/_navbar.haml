@@ -3,17 +3,18 @@
     %a.navbar-brand{href: "/"}
       = image_tag 'logo.svg', alt: 'Nerd Drop', height: '28'
 
+    %form.d-flex.mx-auto{action: '/searcher', style: 'max-width: 50%;'}
+      %input.form-control.me-2.rounded-pill{"aria-label": "Search", placeholder: "Search", type: "search", name: 'q'}
+
+      %button.btn.btn-light#navbarSearchBtn{type: "submit"}
+        %svg.bi.bi-search{fill: "black", height: "16", viewbox: "0 0 16 16", width: "16", xmlns: "http://www.w3.org/2000/svg"}
+          %path{d: "M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"}
+
     %button.navbar-toggler{"aria-controls": "navbarScroll", "aria-expanded": "false", "aria-label": "Toggle navigation", "data-bs-target": "#navbarScroll", "data-bs-toggle": "collapse", type: "button"}
       %span.navbar-toggler-icon
-    #navbarScroll.collapse.navbar-collapse
-      %form.d-flex.mx-auto{action: '/searcher'}
-        %input.form-control.me-2.rounded-pill{"aria-label": "Search", placeholder: "Search", type: "search", name: 'q'}
 
-        %button.btn.btn-light{type: "submit"}
-          %svg.bi.bi-search{fill: "black", height: "16", viewbox: "0 0 16 16", width: "16", xmlns: "http://www.w3.org/2000/svg"}
-            %path{d: "M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"}
-
-      %ul.navbar-nav.my-2.my-lg-0.navbar-nav-scroll{style: "--bs-scroll-height: 100px;"}
+    #navbarScroll.collapse.navbar-collapse.ml-auto
+      %ul.navbar-nav.my-2.my-lg-0.navbar-nav-scroll
         %li.nav-item
           %a.nav-link.active{"aria-current": "page", href: "/"} Home
         %li.nav-item.dropdown

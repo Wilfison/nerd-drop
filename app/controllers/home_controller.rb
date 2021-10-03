@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   before_action :set_collection
 
   def index
-    @highlight_post = Post.last
+    @highlight_post = Post.last || Post.new_blank
     @recent_posts = scope_post(9).where.not(id: @highlight_post)
   end
 
